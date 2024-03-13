@@ -4,27 +4,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Глава 2 "Основы JavaScript"</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script defer src="/assets/js/main.js"></script>
 </head>
 <body>
-  <h1 class="header">Задания из учебника LearnJS. Глава 2 "Основы JavaScript"</h1>
-  <div class="section">
-    <h2 class="section__title">
-      <a href="https://learn.javascript.ru/ifelse" target="_blank">Условное ветвление: if, '?'</a>
-    </h2>
-    <div class="section__task task">
-      <h3 class="task__title">
-        <a href="https://learn.javascript.ru/task/check-standard" target="_blank">Название JavaScript</a>
-      </h3>
-      <div class="task__description">
-        <p>Используя конструкцию if..else, напишите код, который будет спрашивать: „Какое «официальное» название JavaScript?“</p>
-        <p>Если пользователь вводит «ECMAScript», то показать: «Верно!», в противном случае – отобразить: «Не знаете? ECMAScript!»</p>
-        <img src="./asset/diagram1.png" alt="">
-      </div>
-      <div class="task__code">
-        <h3 class="task__subtitle">Решение</h3>
-        <code>
-          
-        </code>
+  <div class="page">
+    <h1 class="header">Задания из учебника LearnJS. Глава 2 "Основы JavaScript"</h1>
+    <div class="section">
+      <h2 class="section__title">
+        <a href="https://learn.javascript.ru/ifelse" target="_blank">Условное ветвление: if, '?'</a>
+      </h2>
+      <div class="section__task task">
+        <h3 class="task__title">
+          <a href="https://learn.javascript.ru/task/check-standard" target="_blank">Название JavaScript</a>
+        </h3>
+        <div class="task__description">
+          <p>Используя конструкцию if..else, напишите код, который будет спрашивать: „Какое «официальное» название JavaScript?“</p>
+          <p>Если пользователь вводит «ECMAScript», то показать: «Верно!», в противном случае – отобразить: «Не знаете? ECMAScript!»</p>
+          <img src="./assets/diagram1.png" alt="">
+        </div>
+        <div class="task__code">
+          <h3 class="task__subtitle">Решение</h3>
+          <pre class="task__code">
+            <code class="lang-js">
+              function whatOfficialName() {
+                const QUESTION = 'Какое «официальное» название JavaScript?';
+                const ANSWER = 'ECMAScript';
+                const RESPOND_TRUE = 'Верно!';
+                const RESPOND_FALSE = 'Не знаете? ECMAScript!';
+              
+                const userAnswer = prompt(QUESTION, '');
+              
+                if (userAnswer === ANSWER) {
+                  alert(RESPOND_TRUE);
+                } else {
+                  alert(RESPOND_FALSE);
+                }
+              }
+            </code>
+          </pre>
+          <button type="button" class="task__btn check__task1">Проверить</button>
+        </div>
       </div>
     </div>
   </div>

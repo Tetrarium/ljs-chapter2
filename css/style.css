@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.section {
+  border: 1px solid lightblue;
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+.task__code {
+  border-radius: 5px;
+}
+
+.task__btn {
+  cursor: pointer;
+  border: 1px solid rgb(173, 216, 230);
+  border-radius: 5px;
+  padding: 5px 20px;
+  box-shadow: 1px 1px 5px rgba(173, 216, 230, 1);
+  background: lightcyan;
+
+  transition: all .5s;
+}
+
+.task__btn:hover {
+  background: rgb(208, 236, 236);
+}
+
+.task__btn:active {
+  box-shadow: none;
+}

@@ -8,4 +8,4 @@
 
 Если пользователь вводит «ECMAScript», то показать: «Верно!», в противном случае – отобразить: «Не знаете? ECMAScript!»
 
-![pic1](/asset/diagram1.png);
+![pic1](/assets/diagram1.png);
