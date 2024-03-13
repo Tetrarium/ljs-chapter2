@@ -86,9 +86,43 @@
           <button type="button" class="task__btn check__task2">Проверить</button>
         </div>
       </div>
+      <div class="section__task task">
+        <h3 class="task__title">
+          <a href="https://learn.javascript.ru/task/rewrite-if-question" target="_blank">Перепишите 'if' в '?'</a>
+        </h3>
+        <div class="task__description">
+          <p>Перепишите конструкцию <code class="code">if</code> с использованием условного оператора <code class="code">'?'</code>:</p>
+          <pre class="task__code">
+            <code class="lang-js">
+              let result;
+
+              if (a + b < 4) {
+                result = 'Мало';
+              } else {
+                result = 'Много';
+              }
+            </code>
+          </pre>
+        </div>
+        <div class="task__code">
+          <h3 class="task__subtitle">Решение</h3>
+          <h4 class="task__git">
+            <a href="https://github.com/Tetrarium/ljs-chapter2/blob/main/script/task3.js" target="_blank">GIT</a>
+          </h4>
+          <pre class="task__code">
+            <code class="lang-js">
+              const result = a + b < 4
+              ? 'Мало'
+              : 'Много';
+            </code>
+          </pre>
+          <button type="button" class="task__btn check__task3">Проверить</button>
+        </div>
+      </div>
     </div>
   </div>
   <script src="./script/task1.js"></script>
   <script src="./script/task2.js"></script>
+  <script src="./script/task3.js"></script>
 </body>
 </html>
