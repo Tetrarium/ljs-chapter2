@@ -24,7 +24,7 @@
           <p>Если пользователь вводит «ECMAScript», то показать: «Верно!», в противном случае – отобразить: «Не знаете? ECMAScript!»</p>
           <img src="./assets/diagram1.png" alt="">
         </div>
-        <div class="task__code">
+        <div class="task__solution">
           <h3 class="task__subtitle">Решение</h3>
           <h4 class="task__git">
             <a href="https://github.com/Tetrarium/ljs-chapter2/blob/main/script/task1.js" target="_blank">GIT</a>
@@ -63,7 +63,7 @@
           </ul>
           <p>Предполагается, что пользователь вводит только числа.</p>
         </div>
-        <div class="task__code">
+        <div class="task__solution">
           <h3 class="task__subtitle">Решение</h3>
           <h4 class="task__git">
             <a href="https://github.com/Tetrarium/ljs-chapter2/blob/main/script/task2.js" target="_blank">GIT</a>
@@ -104,7 +104,7 @@
             </code>
           </pre>
         </div>
-        <div class="task__code">
+        <div class="task__solution">
           <h3 class="task__subtitle">Решение</h3>
           <h4 class="task__git">
             <a href="https://github.com/Tetrarium/ljs-chapter2/blob/main/script/task3.js" target="_blank">GIT</a>
@@ -119,10 +119,53 @@
           <button type="button" class="task__btn check__task3">Проверить</button>
         </div>
       </div>
+      <div class="section__task task">
+        <h3 class="task__title">
+          <a href="https://learn.javascript.ru/task/rewrite-if-else-question" target="_blank">Перепишите 'if..else' в '?'</a>
+        </h3>
+        <div class="task__description">
+          <p>Перепишите <code class="code">if..else</code> с использованием нескольких операторов <code class="code">'?'</code>.</p>
+          <p>Для читаемости рекомендуется разбить код на несколько строк.</p>
+          <pre class="task__code">
+            <code class="lang-js">
+              let message;
+
+              if (login == 'Сотрудник') {
+                message = 'Привет';
+              } else if (login == 'Директор') {
+                message = 'Здравствуйте';
+              } else if (login == '') {
+                message = 'Нет логина';
+              } else {
+                message = '';
+              }
+            </code>
+          </pre>
+        </div>
+        <div class="task__solution">
+          <h3 class="task__subtitle">Решение</h3>
+          <h4 class="task__git">
+            <a href="https://github.com/Tetrarium/ljs-chapter2/blob/main/script/task4.js" target="_blank">GIT</a>
+          </h4>
+          <pre class="task__code">
+            <code class="lang-js">
+              const message = login === 'Сотрудник'
+                ? 'Привет'
+                : login === 'Директор'
+                  ? 'Здравствуйте'
+                  : login === ''
+                    ? 'Нет логина'
+                    : '';
+            </code>
+          </pre>
+          <button type="button" class="task__btn check__task4">Проверить</button>
+        </div>
+      </div>
     </div>
   </div>
   <script src="./script/task1.js"></script>
   <script src="./script/task2.js"></script>
   <script src="./script/task3.js"></script>
+  <script src="./script/task4.js"></script>
 </body>
 </html>
