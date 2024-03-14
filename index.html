@@ -30,6 +30,11 @@
             <li><a href="#task8">Вывести простые числа</a></li>
           </ul>
         </li>
+        <li><a href="#switch">2.14 Конструкция "switch"</a>
+          <ul>
+            <li><a href="#task9">Напишите "if", аналогичный "switch"</a></li>
+          </ul>
+        </li>
       </ul>
     </div>
     <div class="section" id="if-else">
@@ -370,6 +375,51 @@
         </div>
       </div>
     </div>
+    <div class="section" id="switch">
+      <h2 class="section__title">
+        <a href="https://learn.javascript.ru/switch" target="_blank">Конструкция "switch"</a>
+      </h2>
+      <div class="section__task task" id="task9">
+        <a href="#contents" class="link-to-top">К оглавлению</a>
+        <h3 class="task__title">
+          <a href="https://learn.javascript.ru/task/for-even" target="_blank">Напишите "if", аналогичный "switch"</a>
+        </h3>
+        <div class="task__description">
+          <p>Напишите <code class="code">if..else</code>, соответствующий следующему <code class="code">switch</code>:</p>
+          <pre class="task__code">
+            <code class="lang-js">
+              switch (browser) {
+                case 'Edge':
+                  alert( "You've got the Edge!" );
+                  break;
+              
+                case 'Chrome':
+                case 'Firefox':
+                case 'Safari':
+                case 'Opera':
+                  alert( 'Okay we support these browsers too' );
+                  break;
+              
+                default:
+                  alert( 'We hope that this page looks ok!' );
+              }
+            </code>
+          </pre>
+        </div>
+        <div class="task__solution">
+          <h3 class="task__subtitle">Решение</h3>
+          <h4 class="task__git">
+            <a href="https://github.com/Tetrarium/ljs-chapter2/blob/main/script/task9.js" target="_blank">GIT</a>
+          </h4>
+          <pre class="task__code">
+            <code class="lang-js">
+              
+            </code>
+          </pre>
+          <button type="button" class="task__btn check__task9">Проверить</button>
+        </div>
+      </div>
+    </div>
   </div>
   <script src="./script/task1.js"></script>
   <script src="./script/task2.js"></script>
@@ -379,5 +429,6 @@
   <script src="./script/task6.js"></script>
   <script src="./script/task7.js"></script>
   <script src="./script/task8.js"></script>
+  <script src="./script/task9.js"></script>
 </body>
 </html>
