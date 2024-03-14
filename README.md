@@ -1,3 +1,5 @@
+[deploy](https://tetrarium.github.io/ljs-chapter2/);
+
 # Задания из учебника [LearnJS Глава 2 Основы JavaScript](https://learn.javascript.ru/first-steps)
 
 ## [Условное ветвление: if, '?'](https://learn.javascript.ru/ifelse)
