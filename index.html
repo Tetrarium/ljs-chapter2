@@ -33,6 +33,7 @@
         <li><a href="#switch">2.14 Конструкция "switch"</a>
           <ul>
             <li><a href="#task9">Напишите "if", аналогичный "switch"</a></li>
+            <li><a href="#task10">Переписать условия "if" на "switch"</a></li>
           </ul>
         </li>
       </ul>
@@ -382,7 +383,7 @@
       <div class="section__task task" id="task9">
         <a href="#contents" class="link-to-top">К оглавлению</a>
         <h3 class="task__title">
-          <a href="https://learn.javascript.ru/task/for-even" target="_blank">Напишите "if", аналогичный "switch"</a>
+          <a href="https://learn.javascript.ru/task/rewrite-switch-if-else" target="_blank">Напишите "if", аналогичный "switch"</a>
         </h3>
         <div class="task__description">
           <p>Напишите <code class="code">if..else</code>, соответствующий следующему <code class="code">switch</code>:</p>
@@ -413,10 +414,76 @@
           </h4>
           <pre class="task__code">
             <code class="lang-js">
-              
+              function checkBrowser(browser) {
+                if (browser === 'Edge') {
+                  return "You've got the Edge!";
+                } else if (
+                  browser === 'Chrome'
+                  || browser === 'Firefox'
+                  || browser === 'Safari'
+                  || browser === 'Opera'
+                ) {
+                  return 'Okay we support these browsers too';
+                } else {
+                  return 'We hope that this page looks ok!';
+                }
+              }
             </code>
           </pre>
           <button type="button" class="task__btn check__task9">Проверить</button>
+        </div>
+      </div>
+      <div class="section__task task" id="task10">
+        <a href="#contents" class="link-to-top">К оглавлению</a>
+        <h3 class="task__title">
+          <a href="https://learn.javascript.ru/task/rewrite-if-switch" target="_blank">Переписать условия "if" на "switch"</a>
+        </h3>
+        <div class="task__description">
+          <p>Перепишите код с использованием одной конструкции <code class="code">switch</code>:</p>
+          <pre class="task__code">
+            <code class="lang-js">
+              const number = +prompt('Введите число между 0 и 3', '');
+
+              if (number === 0) {
+                alert('Вы ввели число 0');
+              }
+
+              if (number === 1) {
+                alert('Вы ввели число 1');
+              }
+
+              if (number === 2 || number === 3) {
+                alert('Вы ввели число 2, а может и 3');
+              }
+            </code>
+          </pre>
+        </div>
+        <div class="task__solution">
+          <h3 class="task__subtitle">Решение</h3>
+          <h4 class="task__git">
+            <a href="https://github.com/Tetrarium/ljs-chapter2/blob/main/script/task10.js" target="_blank">GIT</a>
+          </h4>
+          <pre class="task__code">
+            <code class="lang-js">
+              function checkNumbers() {
+                const number = +prompt('Введите число между 0 и 3', '');
+              
+                switch (number) {
+                  case 0:
+                    alert('Вы ввели число 0');
+                    break;
+                  case 1:
+                    alert('Вы ввели число 1');
+                    break;
+                  case 2:
+                  case 3:
+                    alert('Вы ввели число 2, а может и 3');
+                    break;
+                }
+              }
+            </code>
+          </pre>
+          <button type="button" class="task__btn check__task10">Проверить</button>
         </div>
       </div>
     </div>
@@ -430,5 +497,6 @@
   <script src="./script/task7.js"></script>
   <script src="./script/task8.js"></script>
   <script src="./script/task9.js"></script>
+  <script src="./script/task10.js"></script>
 </body>
 </html>
