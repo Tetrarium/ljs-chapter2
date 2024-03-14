@@ -22,6 +22,11 @@
             <li><a href="#task4">Перепишите 'if..else' в '?'</a></li>
           </ul>
         </li>
+        <li><a href="#while-for">2.13 Циклы while и for</a>
+          <ul>
+            <li><a href="#task5">Выведите чётные числа</a></li>
+          </ul>
+        </li>
       </ul>
     </div>
     <div class="section" id="if-else">
@@ -179,10 +184,47 @@
         </div>
       </div>
     </div>
+    <div class="section" id="while-for">
+      <h2 class="section__title">
+        <a href="https://learn.javascript.ru/while-for" target="_blank">Циклы while и for</a>
+      </h2>
+      <div class="section__task task" id="task5">
+        <a href="#contents" class="link-to-top">К оглавлению</a>
+        <h3 class="task__title">
+          <a href="https://learn.javascript.ru/task/for-even" target="_blank">Выведите чётные числа</a>
+        </h3>
+        <div class="task__description">
+          <p>При помощи цикла <code class="code">for</code> выведите чётные числа от 2 до 10.</p>
+        </div>
+        <div class="task__solution">
+          <h3 class="task__subtitle">Решение</h3>
+          <h4 class="task__git">
+            <a href="https://github.com/Tetrarium/ljs-chapter2/blob/main/script/task5.js" target="_blank">GIT</a>
+          </h4>
+          <pre class="task__code">
+            <code class="lang-js">
+              function getEvens() {
+                let result = [];
+              
+                for (let i = 2; i <= 10; i++) {
+                  if (i % 2 === 0) {
+                    result.push(i);
+                  }
+                }
+              
+                alert(result);
+              }
+            </code>
+          </pre>
+          <button type="button" class="task__btn check__task5">Проверить</button>
+        </div>
+      </div>
+    </div>
   </div>
   <script src="./script/task1.js"></script>
   <script src="./script/task2.js"></script>
   <script src="./script/task3.js"></script>
   <script src="./script/task4.js"></script>
+  <script src="./script/task5.js"></script>
 </body>
 </html>
