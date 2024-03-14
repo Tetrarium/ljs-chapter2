@@ -25,6 +25,7 @@
         <li><a href="#while-for">2.13 Циклы while и for</a>
           <ul>
             <li><a href="#task5">Выведите чётные числа</a></li>
+            <li><a href="#task6">Замените for на while</a></li>
           </ul>
         </li>
       </ul>
@@ -219,6 +220,38 @@
           <button type="button" class="task__btn check__task5">Проверить</button>
         </div>
       </div>
+      <div class="section__task task" id="task6">
+        <a href="#contents" class="link-to-top">К оглавлению</a>
+        <h3 class="task__title">
+          <a href="https://learn.javascript.ru/task/for-even" target="_blank">Замените for на while</a>
+        </h3>
+        <div class="task__description">
+          <p>Перепишите код, заменив цикл <code class="code">for</code> на <code class="code">while</code>, без изменения поведения цикла.</p>
+          <pre class="task__code">
+            <code class="lang-js">
+              for (let i = 0; i < 3; i++) {
+                alert( `number ${i}!` );
+              }
+            </code>
+          </pre>
+        </div>
+        <div class="task__solution">
+          <h3 class="task__subtitle">Решение</h3>
+          <h4 class="task__git">
+            <a href="https://github.com/Tetrarium/ljs-chapter2/blob/main/script/task6.js" target="_blank">GIT</a>
+          </h4>
+          <pre class="task__code">
+            <code class="lang-js">
+              let i = 0;
+              while (i < 3) {
+                alert(`number ${i}!`);
+                i++;
+              }
+            </code>
+          </pre>
+          <button type="button" class="task__btn check__task6">Проверить</button>
+        </div>
+      </div>
     </div>
   </div>
   <script src="./script/task1.js"></script>
@@ -226,5 +259,6 @@
   <script src="./script/task3.js"></script>
   <script src="./script/task4.js"></script>
   <script src="./script/task5.js"></script>
+  <script src="./script/task6.js"></script>
 </body>
 </html>
