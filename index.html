@@ -252,6 +252,40 @@
           <button type="button" class="task__btn check__task6">Проверить</button>
         </div>
       </div>
+      <div class="section__task task" id="task7">
+        <a href="#contents" class="link-to-top">К оглавлению</a>
+        <h3 class="task__title">
+          <a href="https://learn.javascript.ru/task/repeat-until-correct" target="_blank">Повторять цикл, пока ввод неверен</a>
+        </h3>
+        <div class="task__description">
+          <p>Напишите цикл, который предлагает <code class="code">prompt</code> ввести число, большее 100. Если посетитель ввёл другое число – попросить ввести ещё раз, и так далее.</p>
+          <p>Цикл должен спрашивать число пока либо посетитель не введёт число, большее 100, либо не нажмёт кнопку Отмена (ESC).</p>
+          <p>Предполагается, что посетитель вводит только числа. Предусматривать обработку нечисловых строк в этой задаче необязательно.</p>
+        </div>
+        <div class="task__solution">
+          <h3 class="task__subtitle">Решение</h3>
+          <h4 class="task__git">
+            <a href="https://github.com/Tetrarium/ljs-chapter2/blob/main/script/task7.js" target="_blank">GIT</a>
+          </h4>
+          <pre class="task__code">
+            <code class="lang-js">
+              let question = 'Введите число больше 100';
+              while (true) {
+                const value = prompt(question);
+                if (value > 100) {
+                  alert('Правильно!');
+                  break;
+                }
+                if (value === null) {
+                  break;
+                }
+                question = 'Не правильно! Введите еще раз число больше 100';
+              }
+            </code>
+          </pre>
+          <button type="button" class="task__btn check__task7">Проверить</button>
+        </div>
+      </div>
     </div>
   </div>
   <script src="./script/task1.js"></script>
@@ -260,5 +294,6 @@
   <script src="./script/task4.js"></script>
   <script src="./script/task5.js"></script>
   <script src="./script/task6.js"></script>
+  <script src="./script/task7.js"></script>
 </body>
 </html>
