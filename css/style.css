@@ -60,3 +60,22 @@ ul {
 .task__btn:active {
   box-shadow: none;
 }
+
+.comparison-table {
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.comparison-table th,
+.comparison-table td {
+  border: 1px solid black;
+  padding: 0 10px;
+}
+
+.comparison-table th {
+  text-align: center;
+}
+
+.comparison-table td {
+  text-align: right;
+}

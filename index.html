@@ -26,6 +26,8 @@
           <ul>
             <li><a href="#task5">Выведите чётные числа</a></li>
             <li><a href="#task6">Замените for на while</a></li>
+            <li><a href="#task7">Повторять цикл, пока ввод неверен</a></li>
+            <li><a href="#task8">Вывести простые числа</a></li>
           </ul>
         </li>
       </ul>
@@ -286,6 +288,87 @@
           <button type="button" class="task__btn check__task7">Проверить</button>
         </div>
       </div>
+      <div class="section__task task" id="task8">
+        <a href="#contents" class="link-to-top">К оглавлению</a>
+        <h3 class="task__title">
+          <a href=https://learn.javascript.ru/task/list-primes" target="_blank">Вывести простые числа</a>
+        </h3>
+        <div class="task__description">
+          <p>Натуральное число, большее 1, называется простым, если оно ни на что не делится, кроме себя и 1.</p>
+          <p>Другими словами, n > 1 – простое, если при его делении на любое число кроме 1 и n есть остаток.</p>
+          <p>Например, 5 это простое число, оно не может быть разделено без остатка на 2, 3 и 4.</p>
+          <p>Напишите код, который выводит все простые числа из интервала от 2 до n.</p>
+          <p>Для n = 10 результат должен быть 2,3,5,7.</p>
+          <p>P.S. Код также должен легко модифицироваться для любых других интервалов.</p>
+        </div>
+        <div class="task__solution">
+          <h3 class="task__subtitle">Решение</h3>
+          <h4 class="task__git">
+            <a href="https://github.com/Tetrarium/ljs-chapter2/blob/main/script/task7.js" target="_blank">GIT</a>
+          </h4>
+          <pre class="task__code">
+            <code class="lang-js">
+              function getSimples(n) {
+                const simples = [];
+                cicle: for (let i = 2; i <= n; i++) {
+                  const max = Math.sqrt(i);
+                  for (let j = 2; j < max; j++) {
+                    if (i % j === 0) {
+                      continue cicle;
+                    }
+                  }
+                  simples.push(i);
+                }
+              
+                return simples;
+              }
+            </code>
+          </pre>
+          <button type="button" class="task__btn check__task8">Проверить</button>
+          <table class="comparison-table" id="comp-simples">
+            <caption>Время выполнения <code class="code">getSimples(n)</code> для двух вариантов ограничения вложенного цикла, <b>ms</b></caption>
+            <thead>
+              <tr>
+                <th><code class="code">n</code></th>
+                <th><code class="code">j = [ 2, i ]</code></th>
+                <th><code class="code">j = [ 2, Math.sqrt(i) )</code></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>100000</td>
+                <td>1214</td>
+                <td>9</td>
+              </tr>
+              <tr>
+                <td>200000</td>
+                <td>4570</td>
+                <td>20</td>
+              </tr>
+              <tr>
+                <td>300000</td>
+                <td>9901</td>
+                <td>36</td>
+              </tr>
+              <tr>
+                <td>400000</td>
+                <td>17235</td>
+                <td>55</td>
+              </tr>
+              <tr>
+                <td>1000000</td>
+                <td>--</td>
+                <td>188</td>
+              </tr>
+              <tr>
+                <td>10000000</td>
+                <td>--</td>
+                <td>4757</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   </div>
   <script src="./script/task1.js"></script>
@@ -295,5 +378,6 @@
   <script src="./script/task5.js"></script>
   <script src="./script/task6.js"></script>
   <script src="./script/task7.js"></script>
+  <script src="./script/task8.js"></script>
 </body>
 </html>
