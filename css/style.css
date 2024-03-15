@@ -79,3 +79,23 @@ ul {
 .comparison-table td {
   text-align: right;
 }
+
+code {
+  counter-reset: num-line;
+}
+
+.code-line {
+  position: relative;
+  padding-left: 50px;
+  display: inline-block;
+}
+
+.code-line:before {
+  counter-increment: num-line;
+  content: counter(num-line) ' |';
+  text-align: right;
+  position: absolute;
+  width: 50px;
+  left:  0px;
+  color: rgba(135, 206, 250, .3);
+}
