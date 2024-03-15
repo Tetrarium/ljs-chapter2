@@ -1,4 +1,4 @@
-import addNumLine from "/assets/js/codeLine.js";
+import addNumLine from "./codeLine.js";
 
 (function () {
   let hasLoaded = false;
