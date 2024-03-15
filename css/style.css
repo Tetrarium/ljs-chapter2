@@ -87,7 +87,6 @@ code {
 .code-line {
   position: relative;
   padding-left: 50px;
-  display: inline-block;
 }
 
 .code-line:before {
